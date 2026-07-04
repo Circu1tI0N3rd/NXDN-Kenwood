@@ -17,18 +17,23 @@
 ### Step 2: Configure NXDN
 
 1. Navigate to _Edit_ > _NXDN_.  The _NXDN_ window appears.
+
 ![That's CPS toolbar _Edit_, then _NXDN_ inside the _Edit_ menu.](/images/KCPS_Edit_NXDN.png)
 
 2. Under _General 1_ tab, enter _Unit ID (Own)_ with the obtained NXDN ID from RadioID, and _Unit ID Name (Own)_ with your callsign (of course it is the one you get your ID with).
+
 ![Example populated NXDN ID and callsign of my own.](/images/KCPS_NXDN_General1.png)
 
 3. Under _Conventional_ tab, change _Premable Length_ to a desired value, maximum is 254.  This setting affects how the hotspot can detect the NXDN radio frame, so I leave at 254 for now.
+
 ![_Preamble Length_ at 254 for example configuration, and also works best](/iimages/KCPS_NXDN_Preamble.png)
 
 4. For _Unit ID List_, just fill in the NXDN ID of people you know.  It allows you to identify the incoming caller on the display, or allow you to make private call to that person later.
+
 ![Standard populated entry for _Unit ID List_](/images/KCPS_NXDN_idlist.png)
 
 5. Fill the _Group ID List_ with any NXDN reflectors you want to connect.  You can find a number of public refectors under [DVRef.com](https://dvref.com/nxdn/) or [PiStar.uk](https://www.pistar.uk/nxdn_reflectors.php).  You should also add Group IDs `10` (parrot) and `9999` (unlink), as it allows you to test your NXDN radio without messing with others and unlink from reflectors from your radio.  As for Group ID `20`, it is for NXDN2DMR service, which will be covered under a separate guide.
+
 ![Example list of Group IDs filled](/images/KCPS_NXDN_groups.png)
 
 6. Close the _NXDN_ window.
@@ -38,9 +43,11 @@
 This step allows you to later access those reflector IDs aforementioned.  Now it is not strictly what key you selected, as long as you remember it to navigate from your Kenwood radio, that's all.
 
 1. Navigate to _Edit_ > _Key Assignment_, and _Key Assignment_ window appears.
+
 ![That's _Edit_ menu of Kenwood CPS, and select _Key Assignment_ from the drop down.](/images/KCPS_Edit_Keys.png)
 
 2. Under _Panel_ tab, set the _Function_ for desired keys with `Group (NXDN)`, `Individual (NXDN)`, `CH/GID Up`, `CH/GID Down`, `Zone Up` and `Zone Down`.  For me, I ommitted the `Individual (NXDN)` , because I don't need it.
+
 ![One configuration of _Key Assignment_](/images/KCPS_Keys_Panel.png)
 
 3. Close the _Key Assignment_ window.
@@ -51,16 +58,19 @@ Further, you can add whatever functions to whatever keys you want.  You can even
 
 1. There should be _Zone Information_ window already there.  If not, navigate to
 _Edit_ > _Zone Information_.
+
 ![Zone Information window with populated channel](/images/KCPS_ZoneInfo.png)
 
 2. Under _Zone Infomation_ window, press _Zone Edit_.
 
 3. Ensure that _Audio Control (NXDN)_ is set to `RAN`.  When you done, press _Close_.
+
 ![Zone Edit window with configured Audio Control](/images/KCPS_Zone.png)
 
 4. Now press _Channel Edit_ under _Zone Information_ window.
 
 5. For simplex, enter the same frequency that you configured with Pi-Star into both _TX Frequency_ and _RX Frequency_ (beware the decimal places and your radio frequency resolution, you may have to adjust Pi-Star to match your radio frequency).  Set _RAN Decode_ and _RAN Encode_ to the NXDN RAN that you configured with Pi-Star (this is similar to color code on DMR).  Double check to see that _Selcall on PTT (NXDN)_ is set to off.  Name your channel, adjust the power then press _Close_.
+
 ![An example simplex channel setup.](/images/KCPS_Channel.png)
 
 To add more channels, repeat steps 4 and 5, but change the channel number before doing step 5.  As far as I can see, adding more channels only make sense if you intend to connect to multiple NXDN repeaters in your area and your hotspot; or that you have many hotspots.  Most of the time, to change talkgroup (aka reflectors), you would normally operate that with the `Group (NXDN)` key you preprogrammed earlier.
