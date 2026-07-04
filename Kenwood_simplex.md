@@ -26,7 +26,7 @@
 
 3. Under _Conventional_ tab, change _Premable Length_ to a desired value, maximum is 254.  This setting affects how the hotspot can detect the NXDN radio frame, so I leave at 254 for now.
 
-![_Preamble Length_ at 254 for example configuration, and also works best](/iimages/KCPS_NXDN_Preamble.png)
+![_Preamble Length_ at 254 for example configuration, and also works best](/images/KCPS_NXDN_Preamble.png)
 
 4. For _Unit ID List_, just fill in the NXDN ID of people you know.  It allows you to identify the incoming caller on the display, or allow you to make private call to that person later.
 
